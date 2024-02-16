@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Student Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('123.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(51, 51, 51, 0.8);
+      /* Slightly transparent black background */
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: rgba(102, 102, 102, 0.8);
+      /* Slightly transparent dark gray background */
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    section {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Semi-transparent black background */
+      border-radius: 10px;
+      margin: 20px;
+      position: relative;
+      /* Make the section a positioning context */
+    }
+
+    #logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    #logo {
+      max-width: 200px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    #social-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-button {
+      background-color: #3578E5;
+      /* Facebook color */
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      /* Green background */
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      /* Darker green on hover */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showHome()">Home</a>
+    <a href="#" onclick="showAbout()">About</a>
+    <a href="#" onclick="showContact()">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Hi! It's me...</h2>
+    <h2>JUDEL D. JUPIA</h2>
+    <p>As a dynamic and aspiring Bachelor of Science in Information Technology (BSIT) student, I am committed to mastering the intricate world of technology and its applications. Driven by a passion for innovation and a relentless pursuit of knowledge, I bring a unique blend of technical expertise, problem-solving skills, and a strong commitment to excellence to the field of Information Technology.</p>
+    <img src="2.png" alt="Profile Picture" style="max-width: 20%; border-radius: 10px; margin-bottom: 20px;">
+
+      <div id="social-buttons">
+        <a class="social-button" href="https://www.facebook.com/judeljupia13" target="_blank">Facebook</a>
+        <a class="social-button" href="chickencubes13@gmail.com">Gmail</a>
+        <a class="social-button" href="https://www.instagram.com/judeljupia_?igsh=N3JjcTN3anBtamJp" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="display: none;">
+    <h2>About Me</h2>
+    <p>I am a dedicated BSIT student with a passion for leveraging technology to address complex challenges. My academic achievements, technical skills, project experiences, and commitment to ongoing learning position me as a valuable asset in the field of Information Technology. I look forward to contributing my skills and enthusiasm to a dynamic and innovative professional environment.</p>
+    <img src="3.jpg" alt="Profile Picture" style="max-width: 20%; border-radius: 10px; margin-bottom: 20px;">
+
+  </section>
+
+  <section id="contact" style="display: none;">
+    <h2>Contact Me</h2>
+    <form id="contact-form" action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    function showHome() {
+      document.getElementById('home').style.display = 'block';
+      document.getElementById('about').style.display = 'none';
+      document.getElementById('contact').style.display = 'none';
+    }
+
+    function showAbout() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('about').style.display = 'block';
+      document.getElementById('contact').style.display = 'none';
+    }
+
+    function showContact() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('about').style.display = 'none';
+      document.getElementById('contact').style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>
